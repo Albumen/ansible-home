@@ -1,0 +1,32 @@
+---
+
+- name: copy dotfiles to home directory
+  copy:
+    src="{{ item }}"
+    dest="{{ ansible_env.HOME }}/{{ item }}"
+    owner="{{ ansible_env.USER }}"
+    group=staff
+    mode=0644
+  with_items: "{{home_dir_dot_files}}"
+
+# Having gitconfig and gitignore_global in the repo with the dots in their
+# names can cause headaches, so I'm storing them without the dots. This
+# task puts the dots back in when deploying the files.
+#
+- name: copy renamed git related related files
+  copy:
+    src="{{ item }}"
+    dest="{{ ansible_env.HOME }}/.{{ item }}"
+    owner="{{ ansible_env.USER }}"
+    group=staff
+    mode=0644
+  with_items: "{{ home_dir_renamed_dot_files }}"
+
+- name: copy dot folders to home directory
+  copy:
+    src="{{ item }}/"
+    dest="{{ ansible_env.HOME }}/{{ item }}/"
+    owner="{{ ansible_env.USER }}"
+    group=staff
+    mode=0644
+  with_items: "{{home_dir_dot_folders}}"

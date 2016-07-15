@@ -1,0 +1,42 @@
+[push]
+	default = simple
+[user]
+	name = 
+	email = 
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = subl -n -w
+  	pager = less
+	autocrlf = input
+[help]
+  	autocorrect = 20
+[color]
+  	ui = auto
+[credential]
+  	helper = osxkeychain
+[alias]
+	lol = log --oneline --graph --decorate --all
+	po = push origin
+	pom = push origin master
+	poh = push origin HEAD
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+	prompt = false
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustexitcode = true
+[merge]
+	tool = Kaleidoscope
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+	prompt = false
+[diff]
+	tool = Kaleidoscope
