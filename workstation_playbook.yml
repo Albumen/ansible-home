@@ -1,0 +1,20 @@
+---
+
+# Complete configuration of a (well, my) workstation. Includes pretty much everything
+# I need for daily tasks, programming, and work.
+#
+- name: workstation setup
+  hosts: localhost
+
+  # Adding the roles one-by-one as I get them ported from my personal implementation.
+  roles:
+    # - security
+    - dotfiles
+    # - homebrew
+    # - ruby
+
+  environment:
+    PATH: "~/.rbenv/shims:~/bin:/usr/local/bin:/usr/local/opt:/usr/local:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
+    # # With the latest version of brew cask, apps are automatically installed to /Applications, 
+    # # so the line below is not needed
+    # HOMEBREW_CASK_OPTS: "--appdir=/Applications"
