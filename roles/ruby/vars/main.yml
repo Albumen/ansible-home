@@ -1,0 +1,17 @@
+---
+
+ruby_homebrew_items:
+  - rbenv
+  - ruby-build
+  - rbenv-binstubs
+
+ruby_version: '2.3.1'
+
+ruby_gems:
+  - cocoapods
+  - rake
+  - bundler
+  - xcodeproj
+  - xcpretty
+  - rspec
+  - xunique

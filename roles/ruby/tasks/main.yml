@@ -1,0 +1,31 @@
+---
+
+- name: Ensure ruby-related homebrew items are installed
+  homebrew:
+    name: "{{ item }}"
+    state: "present"
+  with_items: "{{ ruby_homebrew_items }}"
+
+- name: Get list of installed rubies
+  shell: "rbenv versions --bare | grep {{ ruby_version }}"
+  register: ruby_is_installed
+  changed_when: false
+
+- name: Ensure ruby version is installed
+  shell: "rbenv install {{ ruby_version }}"
+  when: ruby_version not in ruby_is_installed.stdout_lines
+
+- name: Check global version
+  shell: "rbenv global"
+  register: global_version
+  changed_when: false
+
+- name: Ensure ruby version is global
+  shell: "rbenv global {{ ruby_version }}"
+  when: ruby_version not in global_version.stdout_lines
+
+- name: Install base gems
+  gem:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ ruby_gems }}"
