@@ -51,4 +51,8 @@ If you are running this for the first time on a new or clean machine, you'll nee
     
 	Note that the playbook command above will execute on localhost. If you wish to manage one or more remote systems, edit the inventory file and (if needed) the group vars or host vars files as needed, then specify the inventory file in the command... replace ```-i "localhost, -c local``` with ```-i inventory```.
 
-	
+
+###Author Information
+
+Lovingly crafted by Albumen, albumen.dake@gmail.com
+
