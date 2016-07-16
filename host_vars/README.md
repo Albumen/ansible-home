@@ -1,0 +1,1 @@
+If you are managing more than one machine, and setting vary between the machines, you can place host-specific settings in this folder. For each machine, create a .yml file with the machine name (the same name as in the inventory.yml file), and add the variables to the files. These will override settings in the roles' local variable files.
