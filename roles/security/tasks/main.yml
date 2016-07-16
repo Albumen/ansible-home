@@ -1,0 +1,40 @@
+---
+# roles/security/tasks/main.yml
+
+- name: Ensure .ssh directory is present
+  file:
+    state: directory
+    mode: 0700
+    dest: "{{ ansible_env.HOME }}/.ssh"
+
+- name: Copy the appropriate ssh config file
+  copy:
+    src: sshconfig
+    dest: "{{ ansible_env.HOME }}/.ssh/config"
+    owner: "{{ ansible_env.USER }}"
+    group: staff
+    mode: 0644
+
+# NOTE:
+# The following assumes that there is a file called ssh_keys.yml in the vars 
+# directory, which has been encrypted with ansible vault.
+#
+# The task will loop through each and convert the variables into files in the 
+# .ssh directory
+#
+# See https://dantehranian.wordpress.com/2015/07/24/managing-secrets-with-ansible-vault-the-missing-guide-part-1-of-2/
+# for more information on this, and how to structure the variables in the file
+# 
+# A sample *unencrypted* file is included
+#
+- name: Get the ssh keys (encrypted file)
+  include_vars: "ssh_keys.yml"
+
+- name: Deploy the keys
+  copy:
+    dest: "{{ansible_env.HOME }}/.ssh/{{ item.key }}"
+    content: "{{ item.value.content }}"
+    owner: "{{ ansible_env.USER }}"
+    group: staff
+    mode: "{{ item.value.mode }}"
+  with_dict: ssh_keys
