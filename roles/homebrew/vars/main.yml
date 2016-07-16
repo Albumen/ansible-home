@@ -1,0 +1,81 @@
+---
+# vars file for homebrew
+homebrew_taps:
+  - caskroom/cask
+  - homebrew/dupes
+  - homebrew/python
+  - homebrew/science
+  - homebrew/versions
+  - oclint/formulae
+
+homebrew_items:
+  - ag
+  - git
+  - ios-sim
+  - mongodb
+  - nginx
+  - node
+  - oclint
+  - sqlite
+  - tree
+  - xctool
+  - xcproj
+
+# the following are items that may piss off Ansible, so should only
+# be included in maintenance runs after they've been *manually*
+# installed.
+additional_homebrew_items:
+  - python
+
+homebrew_cask_items:
+  - a-better-finder-rename
+  - atom
+  - backblaze
+  - backblaze-downloader
+  - calibre
+  - clamxav
+  - cleanmymac
+  - dash
+  # # Note:
+  # # Evernote can be installed easily via brew cask. However, as of Jan 2016 I have 
+  # # found some very frustrating issues with synchronization and retention of preferences
+  # # when using the non-appstore version of Evernote, which did not occur when using the
+  # # appstore version. Until those are resolved, I am avoiding the brew cask installation
+  # # of Evernote.
+  # #
+  # - evernote
+  - firefox
+  - gitup
+  - java7
+  - java
+  # # Note: 
+  # # Kaleidoscope is a fantastic program. It is not free, though, so if you don't want
+  # # to buy it you can comment it out here.
+  - kaleidoscope
+  - little-snitch
+  - macpaw-gemini
+  - onyx
+  # # Note: 
+  # # unless you plan to do some Python deveopment, you don't need PyCharm
+  # - pycharm
+  # #
+  # # Note:
+  # # R studio is a nice community version of R. If you're not doing R development, don't
+  # # bother installing it. :)
+  # #
+  # - rstudio
+  - sourcetree
+  # # Note:
+  # # Because, who doesn't want to play Star Realms??
+  - starrealms
+  - sublime-text
+  - xquartz
+  # # Note:
+  # # If you need to do any development work with Ansible, or you want to spin up
+  # # environments with, for example, a database server, and web service server, and 
+  # # a client system, then VirtualBox and Vagrant rock. If you never need to do these
+  # # things, don't install them.
+  # # VirtualBox is also commonly used for the emulators in Android development.
+  # #
+  - vagrant
+  - virtualbox

@@ -1,0 +1,53 @@
+---
+# tasks file for homebrew
+- name: Ensure homebrew install location exists
+  file:
+    path: "/usr/local"
+    owner: "{{ ansible_env.USER }}"
+    group: admin
+    mode: 0755
+    state: directory
+  become: yes
+
+- name: Ensure homebrew is installed
+  git:
+    repo: git://github.com/homebrew/homebrew.git
+    version: master
+    dest: "/usr/local"
+    update: yes
+    accept_hostkey: yes
+
+- name: Ensure proper permissions on homebrew bin dirs
+  file:
+    path: "/usr/local/bin"
+    owner: "{{ ansible_env.USER }}"
+    group: admin
+    mode: 0755
+    state: directory
+    recurse: true
+  become: yes
+
+- name: Configure taps
+  homebrew_tap:
+    tap: "{{ item }}"
+    state: present
+  with_items: "{{ homebrew_taps }}"
+
+- name: Install base brew items
+  homebrew:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ homebrew_items }}"
+
+# Note: see the warning in the vars/main.yml file regarding the additional items
+- name: Install brew additional items
+  homebrew:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ additional_homebrew_items }}"
+
+- name: Install brew cask items
+  homebrew_cask:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ homebrew_cask_items }}"
