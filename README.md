@@ -17,7 +17,7 @@ The playbook can be run for initial setup as well as periodic maintenance. The f
 
 ###Initial setup only
 If you are running this for the first time on a new or clean machine, you'll need to either:
-- install the Command Line Tools (required for most other items we'll install)
+- install the Command Line Tools (required for most other items we'll install). Note that there are a couple items installed in the homebrew_items role that require the full installation of Xcode.
 
     You can install the Command Line Tools by entering the following in Terminal:
 	```
