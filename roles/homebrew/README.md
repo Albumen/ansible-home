@@ -1,8 +1,8 @@
 #Role: Homebrew
 
-Ensures homebrew and brew-cask are installed, as well as any other specified taps, apps, and items.
+Ensures homebrew is installed, a couple core items, as well as any specified taps.
 
-One subsequent maintenance runs, the role will ensure that the specified taps, apps, and items remain present. It will *not*, however, remove items that are not in the role's lists, so the role cannot be used to fully enforce a complete configuration.
+One subsequent maintenance runs, the role will ensure that the specified taps remain present. It will *not*, however, remove items that are not in the role's lists, so the role cannot be used to fully enforce a complete configuration.
 
 ###Requirements
 
@@ -10,13 +10,11 @@ Installation of homebrew itself, and permissions management of the homebrew inst
 
 Installation and use of homebrew requires git, which may not be present in a fresh OS X instance. Certain brew items require clang. Ensure that Command Line Tools are installed before using this role.
 
-Some brew items requie the presence of Java. Java should be installed using this role, as one of the git items. Java-dependent items should be listed after Java in the list of items to install.
+Some brew items require the presence of Java. Java should be installed using this role, as one of the git items. Java-dependent items should installed in the homebrew_items role after Java is installed here.
 
 ###Role Variables
 
-The homebrew role uses three variables: ```homebrew_taps```, which contains the list of brew taps to tap before processing other items; ```homebrew_items```, which contains the list of brew items to install; and ```homebrew_cask_items```, which contains the list of brew cask items to install.
-
-Previously, it was necessary to set an environment variable telling brew cask to put the apps in /Applications. This is no longer the case.
+The homebrew role uses three variables: ```homebrew_taps```, which contains the list of brew taps to tap before processing other items; ```homebrew_items```, which contains the list of core brew items to install.
 
 ###Dependencies
 

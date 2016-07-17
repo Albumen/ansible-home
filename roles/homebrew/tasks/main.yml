@@ -27,27 +27,14 @@
     recurse: true
   become: yes
 
-- name: Configure taps
+- name: Tap the taps
   homebrew_tap:
     tap: "{{ item }}"
     state: present
-  with_items: "{{ homebrew_taps }}"
+  with_items: "{{ homebrew_core_taps }}"
 
-- name: Install base brew items
+- name: Install core homebrew items
   homebrew:
-    name: "{{ item }}"
+    item: "{{ item }}"
     state: present
-  with_items: "{{ homebrew_items }}"
-
-# Note: see the warning in the vars/main.yml file regarding the additional items
-- name: Install brew additional items
-  homebrew:
-    name: "{{ item }}"
-    state: present
-  with_items: "{{ additional_homebrew_items }}"
-
-- name: Install brew cask items
-  homebrew_cask:
-    name: "{{ item }}"
-    state: present
-  with_items: "{{ homebrew_cask_items }}"
+  with_items: "{{ homebrew_core_items }}"

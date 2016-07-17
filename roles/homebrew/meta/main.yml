@@ -1,3 +1,4 @@
 # playbooks/roles/homebrew/meta/main.yml
 
-dependencies: []
+dependencies:
+  - security
