@@ -8,13 +8,16 @@
 
   # Adding the roles one-by-one as I get them ported from my personal implementation.
   roles:
-    # - security
+    - security
     - dotfiles
-    # - homebrew
-    # - ruby
+    - homebrew
+    - homebrew_items
+    - brewcask_items
+    - ruby
+    # # Note: if you are running the playbook against the local machine, installing Python will make Ansible
+    # # very unhappy. Only do this if you're running against a remote machine.
+    #- python
 
   environment:
     PATH: "~/.rbenv/shims:~/bin:/usr/local/bin:/usr/local/opt:/usr/local:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
-    # # With the latest version of brew cask, apps are automatically installed to /Applications, 
-    # # so the line below is not needed
-    # HOMEBREW_CASK_OPTS: "--appdir=/Applications"
+    HOMEBREW_CASK_OPTS: "--appdir=/Applications"

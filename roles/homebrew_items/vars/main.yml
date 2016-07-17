@@ -1,0 +1,20 @@
+---
+
+homebrew_taps:
+  - homebrew/science
+  - oclint/formulae
+
+homebrew_items:
+  - ag
+  - git
+  - ios-sim
+  - mongodb
+  - nginx
+  - node
+  - oclint
+  - sqlite
+  - tree
+  # # For the following two items, Xcode must be installed. Whenever Xcode is updated, xcproj must be reinstalled,
+  # # because it only works with the version of Xcode used to compile it.
+  - xctool
+  - xcproj

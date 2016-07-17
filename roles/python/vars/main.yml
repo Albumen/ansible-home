@@ -1,0 +1,17 @@
+---
+
+python_taps:
+  - homebrew/python
+
+python_items:
+  - paramiko
+  - Jinja2
+  - pycrypto
+  - ecdsa
+  - pycparser
+  - pyyaml
+  - six
+  - markupsafe
+  - nose
+  - mock
+  - coverage

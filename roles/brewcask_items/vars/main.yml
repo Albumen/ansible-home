@@ -1,0 +1,48 @@
+---
+
+brewcask_taps:
+  - caskroom/cask
+
+brewcask_items:
+  - a-better-finder-rename
+  - atom
+  - backblaze
+  - backblaze-downloader
+  - calibre
+  - clamxav
+  - cleanmymac
+  - dash
+  - firefox
+  - gitup
+  - java7
+  - java
+  # # Note:  Kaleidoscope is a fantastic program. It is not free, though, so if you don't want
+  # # to buy it you can comment it out here.
+  - kaleidoscope
+  - little-snitch
+  - macpaw-gemini
+  - onyx
+  - sourcetree
+  # # Note: because, who doesn't want to play Star Realms??
+  - starrealms
+  - sublime-text
+  - xquartz
+  # #
+  # # Other items, which I don't always want to install
+  # #
+  # # Note: Evernote can be installed easily via brew cask. However, as of Jan 2016 I have 
+  # # found some very frustrating issues with synchronization and retention of preferences
+  # # when using the non-appstore version of Evernote, which did not occur when using the
+  # # appstore version. Until those are resolved, I am avoiding the brew cask installation
+  # # of Evernote.
+  # #
+  # - evernote
+  # #
+  # # Note: unless you plan to do some Python deveopment, you don't need PyCharm
+  # #
+  # - pycharm
+  # #
+  # # Note:vR studio is a nice community version of R. If you're not doing R development, don't
+  # # bother installing it. :)
+  # #
+  # - rstudio
