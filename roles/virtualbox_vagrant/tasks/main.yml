@@ -1,0 +1,7 @@
+---
+
+- name: Install vagrant and vbox items
+  homebrew:
+    name: "{{ item }}"
+    state: present
+  with_items: vbox_vagrant_items

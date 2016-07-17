@@ -1,0 +1,5 @@
+---
+
+vbox_vagrant_items:
+  - vagrant
+  - virtualbox
