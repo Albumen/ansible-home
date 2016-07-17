@@ -2,8 +2,7 @@
 
 This collection of roles and accompanying playbook performs initial setup and build of a personal OS X workstation/laptop. Much of this is ported from playbooks and roles I wrote for management of a fleet of developer stations at work, for my use at home. 
 
-I am continuing to port items from the work version to this version.
-- 2016-07-15: Add dot-files role
+I am continuing to port items from the work version I created to this version.
 
 The playbook can be run for initial setup as well as periodic maintenance. The following items are (or will be as I port the roles) installed and/or maintained:
 - SSH keys and configuration
