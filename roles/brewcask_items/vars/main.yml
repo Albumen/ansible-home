@@ -23,6 +23,7 @@ brewcask_items:
   - macpaw-gemini
   - malwarebytes-anti-malware
   - onyx
+  - slack
   - sourcetree
   # # Note: because, who doesn't want to play Star Realms??
   - starrealms
