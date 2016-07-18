@@ -6,4 +6,6 @@ homebrew_core_taps:
 
 homebrew_core_items:
   - git
+
+homebrew_cask_core_items:
   - java
