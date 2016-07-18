@@ -4,6 +4,7 @@ brewcask_taps:
   - caskroom/cask
 
 brewcask_items:
+  - a-better-finder-attribute
   - a-better-finder-rename
   - atom
   - backblaze
@@ -12,6 +13,7 @@ brewcask_items:
   - clamxav
   - cleanmymac
   - dash
+  - duet
   - firefox
   - gitup
   - java7
@@ -21,6 +23,7 @@ brewcask_items:
   - kaleidoscope
   - little-snitch
   - macpaw-gemini
+  - malwarebytes-anti-malware
   - onyx
   - sourcetree
   # # Note: because, who doesn't want to play Star Realms??
