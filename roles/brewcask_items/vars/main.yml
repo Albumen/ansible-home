@@ -4,20 +4,22 @@ brewcask_taps:
   - caskroom/cask
 
 brewcask_items:
-  - a-better-finder-attribute
+  - a-better-finder-attributes
   - a-better-finder-rename
+  - android-studio
   - atom
   - backblaze
   - backblaze-downloader
   - calibre
+  - charles
   - clamxav
   - cleanmymac
   - dash
   - duet
+  - fauxpas
   - firefox
   - gitup
-  - java7
-  - java
+  - github-desktop
   - kaleidoscope
   - little-snitch
   - macpaw-gemini
@@ -28,6 +30,9 @@ brewcask_items:
   # # Note: because, who doesn't want to play Star Realms??
   - starrealms
   - sublime-text
+  - transmission
+  - vagrant
+  - virtualbox
   - xquartz
   # # Other items, which I don't always want to install
   # - pycharm
