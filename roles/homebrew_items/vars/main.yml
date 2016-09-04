@@ -7,12 +7,17 @@ homebrew_taps:
 homebrew_items:
   - ag
   - git
+  - git-town
+  - gradle
+  - infer
   - ios-sim
   - mongodb
   - nginx
   - node
   - oclint
+  # - python
   - sqlite
+  - swiftlint
   - tree
   # # For the following two items, Xcode must be installed. Whenever Xcode is updated, xcproj must be reinstalled,
   # # because it only works with the version of Xcode used to compile it.

@@ -29,8 +29,8 @@ brewcask_items:
   - sourcetree
   # # Note: because, who doesn't want to play Star Realms??
   - starrealms
-  - sublime-text
-  - transmission
+  # - sublime-text
+  # - transmission
   - vagrant
   - virtualbox
   - xquartz

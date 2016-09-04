@@ -8,10 +8,11 @@ ruby_homebrew_items:
 ruby_version: '2.3.1'
 
 ruby_gems:
-  - cocoapods
-  - rake
   - bundler
+  - cocoapods
+  - pivotal_git_scripts
+  - rake
+  - rspec
   - xcodeproj
   - xcpretty
-  - rspec
   - xunique

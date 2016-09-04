@@ -4,14 +4,15 @@ python_taps:
   - homebrew/python
 
 python_items:
-  - paramiko
-  - Jinja2
-  - pycrypto
+  - coverage
   - ecdsa
+  - Jinja2
+  - markupsafe
+  - mock
+  - nose
+  - paramiko
   - pycparser
+  - pycrypto
   - pyyaml
   - six
-  - markupsafe
-  - nose
-  - mock
-  - coverage
+  - xunique

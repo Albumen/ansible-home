@@ -1,23 +1,23 @@
 [push]
 	default = simple
 [user]
-	name = 
-	email = 
+	name =
+	email =
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
 [core]
 	excludesfile = ~/.gitignore_global
-	editor = subl -n -w
-  	pager = less
+	editor = "atom --wait"
+  pager = less
 	autocrlf = input
 [help]
-  	autocorrect = 20
+  autocorrect = 20
 [color]
-  	ui = auto
+  ui = auto
 [credential]
-  	helper = osxkeychain
+  helper = osxkeychain
 [alias]
 	lol = log --oneline --graph --decorate --all
 	po = push origin
@@ -32,9 +32,6 @@
 	trustexitcode = true
 [merge]
 	tool = Kaleidoscope
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 	prompt = false
