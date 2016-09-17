@@ -28,18 +28,12 @@ alias gpom='git push origin master'
 #alias gpod='git push origin develop'
 alias gpoh='git push origin head'
 
-# alias pip='pip2'
-# alias pipos='/Library/Frameworks/Python.framework/Versions/3.5/bin/pip3'
-# alias py='python2'
-# alias py3='python3'
-
 alias brewu='brew cask update && brew update && brew upgrade && brew cleanup'
 alias gemu='gem update --system && gem update && gem clean'
 alias pipu="pip install --upgrade pip && pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
-# alias pip3u="pip3 install --upgrade pip && pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U"
-# alias updateall='brewu && gemu && pipu && pip3u'
-alias updateall='brewu && gemu && pipu'
-# alias piposu="/Library/Frameworks/Python.framework/Versions/3.5/bin/pip3 install --upgrade pip && /Library/Frameworks/Python.framework/Versions/3.5/bin/pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 /Library/Frameworks/Python.framework/Versions/3.5/bin/pip3 install -U"
+alias appleupdate='softwareupdate -i -a'
+alias updateall='brewu && gemu && pipu && appleupdate'
+
 alias ngstop='nginx -s stop'
 
 # load up the git-aware, rbenv-aware prompt helper
