@@ -6,8 +6,8 @@ homebrew_taps:
 
 homebrew_items:
   - ag
+  - carthage
   - git
-  - git-town
   - gradle
   - infer
   - ios-sim
@@ -15,7 +15,10 @@ homebrew_items:
   - nginx
   - node
   - oclint
-  # - python
+  - python
+  - rbenv
+  - rbenv-binstubs
+  - ruby-build
   - sqlite
   - swiftlint
   - tree
