@@ -1,31 +1,26 @@
 ---
 
-- name: Ensure ruby-related homebrew items are installed
+- name: Ensure ruby is installed via homebrew
   homebrew:
     name: "{{ item }}"
     state: "present"
   with_items: "{{ ruby_homebrew_items }}"
-
-- name: Get list of installed rubies
-  shell: "rbenv versions --bare | grep {{ ruby_version }}"
-  register: ruby_is_installed
-  changed_when: false
-
-- name: Ensure ruby version is installed
-  shell: "rbenv install {{ ruby_version }}"
-  when: ruby_version not in ruby_is_installed.stdout_lines
-
-- name: Check global version
-  shell: "rbenv global"
-  register: global_version
-  changed_when: false
-
-- name: Ensure ruby version is global
-  shell: "rbenv global {{ ruby_version }}"
-  when: ruby_version not in global_version.stdout_lines
 
 - name: Install base gems
   gem:
     name: "{{ item }}"
     state: present
   with_items: "{{ ruby_gems }}"
+
+- name: Deploy Gemfile
+  copy:
+    src="Gemfile"
+    dest="{{ ansible_env.HOME }}/Gemfile"
+    owner="{{ ansible_env.USER }}"
+    group=staff
+    mode=0644
+
+- name: Install gems with bundler
+  bundler:
+    state: present
+    gemfile: "{{ ansible_env.HOME }}/Gemfile"

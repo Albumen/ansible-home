@@ -4,13 +4,9 @@ brewcask_taps:
   - caskroom/cask
 
 brewcask_items:
-  # - a-better-finder-attributes
   - a-better-finder-rename
   - android-studio
   - atom
-  # - backblaze
-  # - backblaze-downloader
-  - calibre
   - charles
   - clamxav
   - cleanmymac
@@ -21,7 +17,6 @@ brewcask_items:
   - gitup
   - github-desktop
   - hazel
-  # - kaleidoscope
   - little-snitch
   - macpaw-gemini
   - malwarebytes-anti-malware
@@ -33,9 +28,6 @@ brewcask_items:
   - sourcetree
   # # Note: because, who doesn't want to play Star Realms??
   - starrealms
-  # - sublime-text
-  # - transmission
-  # - xquartz
   # # Other items, which I don't always want to install
   # - eclipse-ide
   # - pycharm
