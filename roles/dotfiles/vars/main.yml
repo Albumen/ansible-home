@@ -10,7 +10,7 @@ home_dir_dot_files:
   - .curlrc
   - .gemrc
   - .wgetrc
-
+  
 # List of files to be copied and renamed to have a dot in front of the name
 # Mainly for the .gitxxxx files, since they cause problems in this repo if
 # they have the dot
@@ -20,7 +20,7 @@ home_dir_renamed_dot_files:
 
 # List of folders to be copied into the user's home directory.
 # As with the list of files above, these folders and the files they contain
-# will be checked on subsequent maintenance runs of the role, and will be 
+# will be checked on subsequent maintenance runs of the role, and will be
 # updated to match where necessary.
 home_dir_dot_folders:
   - .prompt-helper
