@@ -1,8 +1,5 @@
 source "http://rubygems.org"
 source "http://gems.github.com"
 
-gem "cocoapods"
 gem "colorize"
 gem "rake"
-gem "synx"
-gem "xcpretty"
