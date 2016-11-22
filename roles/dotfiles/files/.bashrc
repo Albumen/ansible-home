@@ -37,7 +37,7 @@ alias gpoh='git push origin head'
 
 alias brewu='brew cask update && brew update && brew upgrade && brew cleanup'
 #alias gemu='gem update --system && gem update && gem clean'
-alias gemu='bundle update && bundle clean'
+alias gemu='bundle update'
 alias pipu="pip install --upgrade pip && pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
 # alias pip3u="pip3 install --upgrade pip && pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U"
 alias appleupdate="softwareupdate -i -a"
