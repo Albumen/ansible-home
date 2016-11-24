@@ -16,9 +16,9 @@ homebrew_items:
   - node
   - oclint
   - python
-  - rbenv
-  - rbenv-binstubs
-  - ruby-build
+  # - rbenv
+  # - rbenv-binstubs
+  # - ruby-build
   - sqlite
   - swiftlint
   - tree
