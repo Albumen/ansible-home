@@ -35,7 +35,7 @@ alias gpoh='git push origin head'
 # alias py='python2'
 # alias py3='python3'
 
-alias brewu='brew cask update && brew update && brew upgrade && brew cleanup'
+alias brewu='brew update && brew update && brew upgrade && brew cleanup'
 #alias gemu='gem update --system && gem update && gem clean'
 alias gemu='bundle update'
 alias pipu="pip install --upgrade pip && pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
