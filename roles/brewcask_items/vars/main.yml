@@ -5,14 +5,14 @@ brewcask_taps:
 
 brewcask_items:
   - a-better-finder-rename
-  - android-studio
+  #- android-studio
   - atom
   - charles
   - clamxav
   - cleanmymac
-  - dash
-  - duet
-  - fauxpas
+  #- dash
+  #- duet
+  #- fauxpas
   - firefox
   - gitup
   - github-desktop

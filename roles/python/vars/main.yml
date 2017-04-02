@@ -11,6 +11,7 @@ python_items:
   - mock
   - nose
   - paramiko
+  - punic
   - pycparser
   - pycrypto
   - pyyaml

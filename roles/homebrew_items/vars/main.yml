@@ -6,23 +6,15 @@ homebrew_taps:
 
 homebrew_items:
   - ag
-  - carthage
   - git
   - gradle
   - infer
   - ios-sim
+  - mas
   - mongodb
   - nginx
   - node
   - oclint
   - python
-  # - rbenv
-  # - rbenv-binstubs
-  # - ruby-build
-  - sqlite
   - swiftlint
   - tree
-  # # For the following two items, Xcode must be installed. Whenever Xcode is updated, xcproj must be reinstalled,
-  # # because it only works with the version of Xcode used to compile it.
-  - xctool
-  - xcproj
